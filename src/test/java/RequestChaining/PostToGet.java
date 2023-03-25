@@ -30,11 +30,11 @@ public void chaining() {
 	
 	String pid=res.jsonPath().get("projectId");
 	
-	given()
-	.pathParam("pd", pid)
-	
-	.when()
-	.get("/projects/{pd}")
+//	given()
+//	.pathParam("pd", pid)
+//	
+	 when()
+	.get("/projects/"+pid)
 	.then()
 	.log().body();
 	
